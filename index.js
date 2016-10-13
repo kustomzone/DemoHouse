@@ -9,7 +9,7 @@ var fs = require('fs');
  */
 var root = __dirname,
 	distMd = 'list.md';
-	url = 'http:http://blog.unofficial.cn/DemoHouse/';
+	url = '/DemoHouse/';
 
 
 //
@@ -45,7 +45,7 @@ function rmFile() {
 //
 function writeFile(r) {
 	return new Promise(function(resolve, reject) {
-		fs.writeFile(root + '/' + distMd, "["+ r +"]("+ url + r +"/index.html)\r\n" , {"flag": "a+"}, function(err) {
+		fs.writeFile(root + '/' + distMd, "- ["+ r +"]("+ url + r +"/index.html)\r\n" , {"flag": "a+"}, function(err) {
 			if(err) {
 				reject(err);
 			}
