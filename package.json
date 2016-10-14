@@ -1,0 +1,26 @@
+{
+  "name": "demo_house",
+  "version": "1.0.0",
+  "description": "DemoHouse is a collection of JavaScript、CSS3、Canvas、SVG and Web Animation demos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerexyz/DemoHouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jerexyz/DemoHouse/issues"
+  },
+  "homepage": "https://github.com/jerexyz/DemoHouse#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.3",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-util": "^3.0.7",
+    "juicer": "^0.6.14"
+  }
+}

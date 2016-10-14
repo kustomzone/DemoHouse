@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>DemoHouse</title>
+	<style>
+		.list {
+			list-style: none;
+		}
+		
+		.list li {
+			width: 20%;
+			min-height: 50px;
+			font-size: 20px;
+		}
+		
+		.pull-left {
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>DemoHouse</h1>
+	<ul class="list">
+		{@each demoItems as item}
+		<li class="pull-left"><a href="${rootUrl}${item}">${item}</a></li>
+		{@/each}
+	</ul>
+</body>
+
+</html>

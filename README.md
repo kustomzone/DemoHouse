@@ -19,6 +19,13 @@ Many of the cases are collected from these sites. Also thank other creators!
 node index.js
 ```
 
+## How to build a index.html
+
+```
+npm i 
+npm start
+```
+
 ## License
 
 (The MIT License)
