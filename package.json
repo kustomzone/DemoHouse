@@ -4,7 +4,8 @@
   "description": "DemoHouse is a collection of JavaScript、CSS3、Canvas、SVG and Web Animation demos.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",

@@ -4,6 +4,7 @@ const gUtil = require('gulp-util');
 const browserSync = require('browser-sync').create();
 const juicer = require('juicer');
 const url = require('url');
+const rootUrl = '/';
 
 function getDemoList(dir) {
     return new Promise(function (resolve, reject) {
@@ -25,16 +26,25 @@ function getPageIndex() {
                 return file.indexOf('.') === -1;
             })
             return new Promise(function (resolve, reject) {
-                fs.readFile('./index.html', 'utf-8', function (err, str) {
+                fs.readFile('./index.tpl', 'utf-8', function (err, str) {
                     if (err) {
                         reject(err);
                     }
-                    str = juicer(str, { demoItems: demoFiles });
+                    str = juicer(str, { demoItems: demoFiles, rootUrl:rootUrl });
                     resolve(str);
                 })
             })
         });
 }
+
+gulp.task('default', function (done) {
+    getPageIndex()
+    .then(function(str){
+        fs.writeFile('./index.html',str,function(){
+            done();
+        });
+    });
+})
 
 gulp.task('serve', function () {
 
