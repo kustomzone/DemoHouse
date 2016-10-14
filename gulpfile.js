@@ -26,7 +26,7 @@ function getPageIndex() {
                 return file.indexOf('.') === -1;
             })
             return new Promise(function (resolve, reject) {
-                fs.readFile('./index.tpl', 'utf-8', function (err, str) {
+                fs.readFile('./tpl.html', 'utf-8', function (err, str) {
                     if (err) {
                         reject(err);
                     }
