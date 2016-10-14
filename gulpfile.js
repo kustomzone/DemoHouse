@@ -4,7 +4,7 @@ const gUtil = require('gulp-util');
 const browserSync = require('browser-sync').create();
 const juicer = require('juicer');
 const url = require('url');
-const rootUrl = '/';
+const rootUrl = '';
 
 function getDemoList(dir) {
     return new Promise(function (resolve, reject) {
