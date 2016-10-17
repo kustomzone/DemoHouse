@@ -7,6 +7,13 @@
 	<title>DemoHouse</title>
 	<style>
 
+		h1 {
+			text-align: center;
+			margin-bottom: 1em;
+			padding-right: 10px;
+			border-bottom: 3px double;
+		}
+
 		ol {
 			counter-reset: li;
 			list-style: none;
@@ -15,6 +22,14 @@
 			padding: 0;
 			margin: 0 0 4em;
 			text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+			display: -webkit-flex;
+			display: flex;
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+			-webkit-align-items: flex-start;
+			align-items: flex-start;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
 		}
 		
 		ol li {
@@ -26,9 +41,9 @@
 		}
 		/* -------------------------------------- */
 		.rounded-list li {
-			float:left;
-			margin-left:4%;
-			width: 20%;
+			margin:0 4%;
+			-webkit-flex-basis: 20%;
+			flex-basis: 20%;
 		}
 		.rounded-list a {
 			position: relative;
@@ -39,14 +54,9 @@
 			background: #ddd;
 			color: #444;
 			text-decoration: none;
-			-moz-border-radius: .3em;
-			-webkit-border-radius: .3em;
 			border-radius: .3em;
-			-webkit-transition: all .3s ease-out;
-			-moz-transition: all .3s ease-out;
-			-ms-transition: all .3s ease-out;
-			-o-transition: all .3s ease-out;
 			transition: all .3s ease-out;
+			text-overflow: ellipsis;
 		}
 		
 		.rounded-list a:hover {
@@ -54,11 +64,6 @@
 		}
 		
 		.rounded-list a:hover:before {
-			-moz-transform: rotate(360deg);
-			-webkit-transform: rotate(360deg);
-			-moz-transform: rotate(360deg);
-			-ms-transform: rotate(360deg);
-			-o-transform: rotate(360deg);
 			transform: rotate(360deg);
 		}
 		
@@ -76,14 +81,45 @@
 			border: .3em solid #fff;
 			text-align: center;
 			font-weight: bold;
-			-moz-border-radius: 2em;
-			-webkit-border-radius: 2em;
 			border-radius: 2em;
-			-webkit-transition: all .3s ease-out;
-			-moz-transition: all .3s ease-out;
-			-ms-transition: all .3s ease-out;
-			-o-transition: all .3s ease-out;
 			transition: all .3s ease-out;
+		}
+
+		@media only screen and (max-width: 959px) {
+			.rounded-list li {
+				margin:0 4%;
+				-webkit-flex-basis: 20%;
+				flex-basis: 20%;
+			}
+		}
+
+		@media only screen and (min-width: 768px) and (max-width: 959px) {
+			.rounded-list li {
+				margin:0 4%;
+				-webkit-flex-basis: 20%;
+				flex-basis: 20%;
+			}
+		}
+		@media only screen and (max-width: 767px) {
+			.rounded-list li {
+				margin:0 4%;
+				-webkit-flex-basis: 20%;
+				flex-basis: 40%;
+			}
+		}
+		@media only screen and (min-width: 480px) and (max-width: 767px) {
+			.rounded-list li {
+				margin:0 4%;
+				-webkit-flex-basis: 20%;
+				flex-basis: 40%;
+			}
+		}
+		@media only screen and (max-width: 479px) {
+			.rounded-list li {
+				margin:0 1%;
+				-webkit-flex-basis: 98%;
+				flex-basis: 98%;
+			}
 		}
 	</style>
 </head>
