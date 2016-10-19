@@ -18,6 +18,7 @@ Many of the cases are collected from these sites. Also thank other creators!
 ```
 node index.js
 ```
+If you want to generate a list automatically, you can move the `pre-commit` to `.git/hooks`.
 
 ## How to build a index.html
 
