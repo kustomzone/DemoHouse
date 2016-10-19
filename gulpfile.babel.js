@@ -1,10 +1,10 @@
-const fs = require('fs');
-const gulp = require('gulp');
-const gUtil = require('gulp-util');
-const browserSync = require('browser-sync').create();
-const juicer = require('juicer');
-const url = require('url');
-const path = require('path');
+import fs from 'fs';
+import gulp from 'gulp';
+import * as gUtil from 'gulp-util';
+import * as browserSync from 'browser-sync';
+import url from 'url';
+import path from 'path';
+import juicer from 'juicer';
 const rootUrl = '';
 
 function getDemoList(dir) {
